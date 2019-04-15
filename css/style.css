@@ -32,19 +32,20 @@
   height: 50px;
   line-height: 50px;
   padding: 20px 20px;
+  margin-bottom: 25px;                      /*keep number from overlapping*/
   text-align: center;
-  -webkit-transform: translate(-100px);
-          transform: translate(-100px);
+  /*-webkit-transform: translate(-100px);   don't displace the number    
+          transform: translate(-100px);*/
   border: 4px solid #282c37;
   background-color: #fff;
-  border-radius: 50%;
+  /*border-radius: 50%;                     turn that baby into a square */
   color: #282c37;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.21);
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.21);
 }
 
 #best-seller-titles {
-  max-width: 475px;
+  max-width: 90%;
   margin: 120px auto;
 }
 
@@ -93,4 +94,15 @@
 #masthead img {
   -webkit-transition: 100ms;
   transition: 100ms;
+}
+
+@media screen and (min-width: 776px){
+  /* on screens 776px or larger, turn #best-seller-titles
+  into a two column grid */
+  #best-seller-titles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 100px;
+  }
+
 }
